@@ -23,16 +23,17 @@ public class NBAPlayerEntityModel extends EntityModel<NBAPlayerEntity> {
 		var mesh = new MeshDefinition();
 
 		PartDefinition parts = mesh.getRoot();
-		PartDefinition body = parts.addOrReplaceChild("body", CubeListBuilder.create().texOffs(12, 0).addBox(-1.0F, -12.0F, -1.0F, 2.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
-
+		PartDefinition body = parts.addOrReplaceChild("body", CubeListBuilder.create().texOffs(12, 0).addBox(-1.0F, -12.0F, -1.0F, 2.0F, 1.0F, 2.0F, new CubeDeformation(0.0F))
+				.texOffs(0, 0).addBox(1.0F, 0.0F, -1.5F, 2.0F, 1.0F, 2.0F, new CubeDeformation(0.0F))
+				.texOffs(0, 0).addBox(-3.0F, 0.0F, -1.5F, 2.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
 		body.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 0).addBox(-2.0F, -16.0F, -2.0F, 4.0F, 4.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
-		body.addOrReplaceChild("legs", CubeListBuilder.create().texOffs(11, 15).addBox(1.5F, -5.0F, -0.5F, 1.0F, 5.0F, 1.0F, new CubeDeformation(0.0F))
-			.texOffs(12, 8).addBox(-2.5F, -5.0F, -0.5F, 1.0F, 5.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+		body.addOrReplaceChild("legs", CubeListBuilder.create().texOffs(12, 14).addBox(1.5F, -5.0F, -0.5F, 1.0F, 5.0F, 1.0F, new CubeDeformation(0.0F))
+				.texOffs(12, 8).addBox(-2.5F, -5.0F, -0.5F, 1.0F, 5.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 		body.addOrReplaceChild("torso", CubeListBuilder.create().texOffs(0, 8).addBox(-2.0F, -11.0F, -1.0F, 4.0F, 6.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 
 		PartDefinition arms = body.addOrReplaceChild("arms", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
-		arms.addOrReplaceChild("rightarm_r1", CubeListBuilder.create().texOffs(16, 3).addBox(-5.5F, -10.0F, -0.5F, 1.0F, 4.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.2618F));
-		arms.addOrReplaceChild("leftarm_r1", CubeListBuilder.create().texOffs(0, 16).addBox(4.5F, -10.0F, -0.5F, 1.0F, 4.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, -0.2618F));
+		arms.addOrReplaceChild("rightarm_r1", CubeListBuilder.create().texOffs(0, 16).addBox(-5.5F, -10.0F, -0.5F, 1.0F, 4.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.2618F));
+		arms.addOrReplaceChild("leftarm_r1", CubeListBuilder.create().texOffs(16, 3).addBox(4.5F, -10.0F, -0.5F, 1.0F, 4.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, -0.2618F));
 
 		return LayerDefinition.create(mesh, 32, 32);
 	}

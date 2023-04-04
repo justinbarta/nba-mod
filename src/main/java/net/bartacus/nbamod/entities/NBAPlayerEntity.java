@@ -48,6 +48,6 @@ public class NBAPlayerEntity extends Animal {
     }
 
     public static boolean canSpawn(EntityType<NBAPlayerEntity> entityType, LevelAccessor level, MobSpawnType spawnType, BlockPos pos, RandomSource random) {
-        return checkAnimalSpawnRules(entityType, level, spawnType, pos, random) && pos.getY()> 100;
+        return checkAnimalSpawnRules(entityType, level, spawnType, pos, random) && pos.getY()> 60;
     }
 }

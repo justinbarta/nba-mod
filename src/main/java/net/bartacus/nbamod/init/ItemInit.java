@@ -14,7 +14,7 @@ public class ItemInit {
             () -> new Item(props()));
 
     public static final RegistryObject<ForgeSpawnEggItem> NBA_PLAYER_ENTITY_SPAWN_EGG = ITEMS.register("nba_player_entity_spawn_egg",
-            () -> new ForgeSpawnEggItem(EntityInit.NBA_PLAYER, 0xff55aa, 0x27da9f, props().stacksTo(16)));
+            () -> new ForgeSpawnEggItem(EntityInit.NBA_PLAYER, 0x0d7e36, 0xdadedf, props().stacksTo(16)));
 
     private static Item.Properties props() {
         return new Item.Properties().tab(NBAMod.TAB);
